@@ -1,0 +1,154 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Join the Attitude Army</title>
+  <link href="https://fonts.googleapis.com/css2?family=Courier+Prime&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      background: #000;
+      color: #fff;
+      font-family: 'Courier Prime', monospace;
+    }
+    .attitude-form {
+      font-family: 'Courier Prime', monospace;
+      color: #fff;
+      background: #000;
+      padding: 2rem;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+    .attitude-form label {
+      display: block;
+      font-weight: bold;
+      margin-top: 1rem;
+      margin-bottom: 0.25rem;
+      font-family: 'Courier Prime', monospace;
+    }
+    .attitude-form input,
+    .attitude-form select,
+    .attitude-form textarea {
+      width: 100%;
+      padding: 0.5rem;
+      background: transparent;
+      border: 1px solid #444;
+      color: #fff;
+      font-family: 'Courier Prime', monospace;
+    }
+    .split-input {
+      display: flex;
+      gap: 1rem;
+    }
+    .split-input input {
+      flex: 1;
+    }
+    .radio-group,
+    .role-selector {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+      margin-top: 1rem;
+      margin-bottom: 1.5rem;
+    }
+    .radio-option,
+    .role-selector label {
+      display: flex;
+      align-items: baseline;
+      gap: 0.75rem;
+      font-family: 'Courier Prime', monospace;
+      font-size: 1rem;
+      color: #fff;
+    }
+    .radio-option input[type="radio"],
+    .role-selector input[type="radio"] {
+      appearance: none;
+      width: 18px;
+      height: 18px;
+      border: 2px solid #FFD700;
+      border-radius: 50%;
+      background-color: transparent;
+      margin-right: 0.75rem;
+      position: relative;
+      top: 5px;
+      cursor: pointer;
+    }
+    .radio-option input[type="radio"]:checked::before,
+    .role-selector input[type="radio"]:checked::before {
+      content: '';
+      position: absolute;
+      top: 4px;
+      left: 4px;
+      width: 8px;
+      height: 8px;
+      background-color: #FFD700;
+      border-radius: 50%;
+    }
+    .attitude-form button {
+      background: #fff;
+      color: #000;
+      font-weight: bold;
+      padding: 1rem;
+      border: none;
+      text-transform: uppercase;
+      margin-top: 2rem;
+      cursor: pointer;
+      transition: 0.2s ease;
+    }
+    .attitude-form button:hover {
+      background: #FFD700;
+      color: #000;
+    }
+  </style>
+</head>
+<body>
+<div class="attitude-form">
+  <form action="https://formspree.io/f/xeoklkbd" method="POST" target="_blank">
+    <input type="hidden" name="_redirect" value="https://theattitude.blog/army-confirmation">
+    <input type="hidden" name="_subject" value="New Attitude Army Submission">
+    <input type="text" name="_gotcha" style="display:none">
+
+    <label>Name (required)</label>
+    <div class="split-input">
+      <input type="text" name="first_name" placeholder="First Name" required>
+      <input type="text" name="last_name" placeholder="Last Name" required>
+    </div>
+
+    <label>Email (required)</label>
+    <input type="email" name="email" placeholder="you@attitude.fm" required>
+
+    <label>Favorite Band (required)</label>
+    <input type="text" name="favorite_band" placeholder="Don’t say Nickelback..." required>
+
+    <label>Your Walk-Up Song</label>
+    <input type="text" name="walk_up_song" placeholder="One track to start a bar fight…">
+
+    <label>Pick Your Role in The Attitude Army</label>
+    <div class="role-selector">
+      <label><input type="radio" name="army_role" value="Street Preacher"> <span>Street Preacher</span></label>
+      <label><input type="radio" name="army_role" value="Backstage Rat"> <span>Backstage Rat</span></label>
+      <label><input type="radio" name="army_role" value="Punk Historian"> <span>Punk Historian</span></label>
+      <label><input type="radio" name="army_role" value="Mixtape Dealer"> <span>Mixtape Dealer</span></label>
+      <label><input type="radio" name="army_role" value="Blame It On The Drummer"> <span>Blame It On The Drummer</span></label>
+    </div>
+
+    <label>Be Honest. What runs through your veins?</label>
+    <div class="radio-group">
+      <label class="radio-option"><input type="radio" name="blood" value="vinyl"> <span>Vinyl</span></label>
+      <label class="radio-option"><input type="radio" name="blood" value="cassette"> <span>Cassette</span></label>
+      <label class="radio-option"><input type="radio" name="blood" value="mp3"> <span>MP3</span></label>
+      <label class="radio-option"><input type="radio" name="blood" value="streaming"> <span>Streaming, but I hate it</span></label>
+    </div>
+
+    <label>A Short Confession</label>
+    <textarea name="confession" rows="4" placeholder="It was me who stole the tour poster…"></textarea>
+
+    <label>Got beef with a band? Say it here.</label>
+    <textarea name="beef" rows="3" placeholder="Name names. We’re listening."></textarea>
+
+    <button type="submit">CONFESS & JOIN</button>
+  </form>
+</div>
+</body>
+</html>
